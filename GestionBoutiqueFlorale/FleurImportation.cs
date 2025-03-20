@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Formats.Asn1;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CsvHelper;
+
+namespace GestionBoutiqueFlorale
+{
+    public class FleurImportation
+    {
+        public static List<Fleur> ImporterFleurs(string cheminFichierCsv)
+        {
+            try
+            {
+                using var reader = new StreamReader(cheminFichierCsv);
+                using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                return csv.GetRecords<Fleur>().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur lors de la lecture du fichier CSV: {ex.Message}");
+                return new List<Fleur>();
+            }
+        }
+        public static void AfficherFleursDisponibles(List<Fleur> fleurs)
+        {
+            Console.WriteLine("Fleurs disponibles :");
+            foreach (var fleur in fleurs)
+            {
+                Console.WriteLine($"Nom: {fleur.Nom}, Prix: {fleur.PrixUnitaire} CAD, Couleur: {fleur.CouleurDominante}, Description: {fleur.Description}");
+            }
+        }
+    }
+
+}
+

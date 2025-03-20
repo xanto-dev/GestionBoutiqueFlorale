@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\fleurimportation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\fleurimportation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\facture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\facture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\fournisseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\fournisseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\fleur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\fleur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\bouquet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\bouquet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\proprietaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\proprietaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\vendeur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\vendeur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|c:\\users\\lenovo\\source\\repos\\gestionboutiqueflorale\\gestionboutiqueflorale\\moyenpaiement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BBDF89-F203-4FF3-B486-6E088D2981E1}|GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj|solutionrelative:gestionboutiqueflorale\\moyenpaiement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Fleur.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Fleur.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Fleur.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Fleur.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Fleur.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:00:50.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Utilisateur.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Utilisateur.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Utilisateur.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T19:00:15.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FleurImportation.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\FleurImportation.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\FleurImportation.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\FleurImportation.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\FleurImportation.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T05:16:26.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bouquet.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Bouquet.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Bouquet.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Bouquet.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Bouquet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:01:10.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Program.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Program.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Program.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAwwDIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T18:58:04.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fournisseur.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Fournisseur.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Fournisseur.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Fournisseur.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Fournisseur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:58:25.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Commande.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Commande.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Commande.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Commande.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Commande.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:59:19.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Client.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Client.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Client.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Client.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:57:11.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Facture.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Facture.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Facture.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Facture.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Facture.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA7wCUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:59:50.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Proprietaire.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Proprietaire.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Proprietaire.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Proprietaire.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Proprietaire.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:57:26.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Vendeur.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Vendeur.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\Vendeur.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\Vendeur.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\Vendeur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:58:00.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MoyenPaiement.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\MoyenPaiement.cs",
+              "RelativeDocumentMoniker": "GestionBoutiqueFlorale\\MoyenPaiement.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\MoyenPaiement.cs",
+              "RelativeToolTip": "GestionBoutiqueFlorale\\MoyenPaiement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:02:15.783Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "p4Z8rr+TFlw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
