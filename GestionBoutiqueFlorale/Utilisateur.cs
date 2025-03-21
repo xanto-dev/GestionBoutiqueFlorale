@@ -21,6 +21,10 @@ namespace GestionBoutiqueFlorale
             Telephone = telephone;
             Adresse = adresse;
         }
+        public void AfficherUtilisateurs()
+        {
+            Console.WriteLine($"Nom: {Nom}, Prénom: {Prenom}, Téléphone: {Telephone}, Adresse: {Adresse}");
+        }
 
     }
 

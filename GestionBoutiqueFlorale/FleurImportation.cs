@@ -30,7 +30,7 @@ namespace GestionBoutiqueFlorale
             Console.WriteLine("Fleurs disponibles :");
             foreach (var fleur in fleurs)
             {
-                Console.WriteLine($"Nom: {fleur.Nom}, Prix: {fleur.PrixUnitaire} CAD, Couleur: {fleur.CouleurDominante}, Description: {fleur.Description}");
+                fleur.AfficherDetails();
             }
         }
     }

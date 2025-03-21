@@ -32,6 +32,10 @@ namespace GestionBoutiqueFlorale
             CouleurDominante = couleurDominante;
             Description = description;
         }
-        
+        public void AfficherDetails()
+        {
+            Console.WriteLine($"Nom: {Nom}, Prix: {PrixUnitaire} CAD, Couleur: {CouleurDominante}, Description: {Description}");
+        }
+
     }
 }
