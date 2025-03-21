@@ -15,3 +15,4 @@ C:\Users\LENOVO\source\repos\GestionBoutiqueFlorale\GestionBoutiqueFlorale\obj\D
 C:\Users\LENOVO\source\repos\GestionBoutiqueFlorale\GestionBoutiqueFlorale\obj\Debug\net8.0\GestionBoutiqueFlorale.pdb
 C:\Users\LENOVO\source\repos\GestionBoutiqueFlorale\GestionBoutiqueFlorale\obj\Debug\net8.0\GestionBoutiqueFlorale.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\GestionBoutiqueFlorale\GestionBoutiqueFlorale\obj\Debug\net8.0\ref\GestionBoutiqueFlorale.dll
+C:\Users\LENOVO\source\repos\GestionBoutiqueFlorale\GestionBoutiqueFlorale\obj\Debug\net8.0\GestionBoutiqueFlorale.sourcelink.json

@@ -17,7 +17,7 @@ namespace GestionBoutiqueFlorale
 
         public Commande(int id, Client client, Vendeur vendeur, List<Fleur> fleurs, List<Bouquet> bouquets)
         {
-          
+
             Client = client;
             Vendeur = vendeur;
             Fleurs = fleurs;

@@ -11,8 +11,8 @@ class Program
 
     static void Main(string[] args)
     {
-        // Importer les fleurs depuis le fichier CSV
-        var filename = "C:\\Users\\LENOVO\\Desktop\\fleurs_db.csv";
+        // Importer les fleurs depuis le fichier CSVC:\\Users\\LENOVO\\Desktop\\
+        var filename = "fleurs_db.csv";
         fleurs = FleurImportation.ImporterFleurs(filename);
 
         bool quitter = false;
