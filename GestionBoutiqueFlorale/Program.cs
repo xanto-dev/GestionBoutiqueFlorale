@@ -91,7 +91,7 @@ namespace GestionBoutiqueFlorale
                     break;
             }
         }
-
+        
         static void AjouterClient()
         {
             Console.Write("Nom : ");

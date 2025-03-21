@@ -58,7 +58,7 @@ namespace GestionBoutiqueFlorale
             return new Bouquet(fleursSelectionnees, carte);
         }
 
-        private static void AfficherFleursDisponibles(List<Fleur> fleurs)
+        public static void AfficherFleursDisponibles(List<Fleur> fleurs)
         {
             Console.WriteLine("Fleurs disponibles :");
             for (int i = 0; i < fleurs.Count; i++)
