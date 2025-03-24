@@ -5,13 +5,27 @@ namespace GestionBoutiqueFlorale
 {
     class Program
     {
-        static List<Utilisateur> utilisateurs = new List<Utilisateur>();
+        static List<Client> clients = new List<Client>();
+        static List<Vendeur> vendeurs = new List<Vendeur>();
+        static List<Fournisseur> fournisseurs = new List<Fournisseur>();
+        static List<Proprietaire> proprietaires = new List<Proprietaire>();
         static List<Fleur> fleurs = new List<Fleur>();
         static List<Bouquet> modelesBouquets = new List<Bouquet>();
         static List<Commande> commandes = new List<Commande>();
 
         static void Main(string[] args)
         {
+            // Charger les données (créera le fichier JSON s'il n'existe pas)
+            var data = DataManager.Charger();
+
+            clients = data.clients ?? new List<Client>();
+            vendeurs = data.vendeurs ?? new List<Vendeur>();
+            fournisseurs = data.fournisseurs ?? new List<Fournisseur>();
+            proprietaires = data.proprietaires ?? new List<Proprietaire>();
+            modelesBouquets = data.ModelesBouquets ?? new List<Bouquet>();
+            commandes = data.Commandes ?? new List<Commande>();
+
+          
             // Importer les fleurs depuis le fichier CSV
             var filename = "fleurs_db.csv";
             fleurs = FleurImportation.ImporterFleurs(filename);
@@ -50,6 +64,20 @@ namespace GestionBoutiqueFlorale
             }
         }
 
+        // Sauvegarder les modifications
+        static void SauvegarderData()
+        {
+            DataManager.Sauvegarder(new DataManager.AppData
+            {
+                clients = clients,
+                vendeurs = vendeurs,
+                fournisseurs = fournisseurs,
+                proprietaires = proprietaires,
+                ModelesBouquets = modelesBouquets,
+                Commandes = commandes
+            });
+        }
+
         static void AfficherMenuPrincipal()
         {
             Console.WriteLine("\n=== Menu Principal ===");
@@ -84,7 +112,8 @@ namespace GestionBoutiqueFlorale
                     AjouterFournisseur();
                     break;
                 case "4":
-                    AfficherUtilisateurs();
+                    AfficherClients();
+                    AfficherVendeurs();
                     break;
                 default:
                     Console.WriteLine("Choix invalide.");
@@ -104,7 +133,8 @@ namespace GestionBoutiqueFlorale
             string adresse = Console.ReadLine();
 
             var client = new Client(nom, prenom, telephone, adresse);
-            utilisateurs.Add(client);
+            clients.Add(client);
+            SauvegarderData();
             Console.WriteLine("Client ajouté avec succès !");
         }
 
@@ -120,7 +150,8 @@ namespace GestionBoutiqueFlorale
             string adresse = Console.ReadLine();
 
             var vendeur = new Vendeur(nom, prenom, telephone, adresse);
-            utilisateurs.Add(vendeur);
+            vendeurs.Add(vendeur);
+            SauvegarderData();
             Console.WriteLine("Vendeur ajouté avec succès !");
         }
 
@@ -136,16 +167,25 @@ namespace GestionBoutiqueFlorale
             string adresse = Console.ReadLine();
 
             var fournisseur = new Fournisseur(nom, prenom, telephone, adresse);
-            utilisateurs.Add(fournisseur);
+            fournisseurs.Add(fournisseur);
+            SauvegarderData();
             Console.WriteLine("Fournisseur ajouté avec succès !");
         }
 
-        static void AfficherUtilisateurs()
+        static void AfficherVendeurs()
         {
-            Console.WriteLine("\nListe des utilisateurs :");
-            foreach (var utilisateur in utilisateurs)
+            Console.WriteLine("\nListe des vendeurs :");
+            foreach (var vendeur in vendeurs)
             {
-                Console.WriteLine($"- {utilisateur.GetType().Name} : {utilisateur.Nom} {utilisateur.Prenom}");
+                Console.WriteLine($"- {vendeur.Nom}, {vendeur.Prenom}");
+            }
+        }
+        static void AfficherClients()
+        {
+            Console.WriteLine("\nListe des clients :");
+            foreach (var client in clients)
+            {
+                Console.WriteLine($"- {client.Nom}, {client.Prenom}");
             }
         }
 
@@ -212,15 +252,15 @@ namespace GestionBoutiqueFlorale
         {
             // Sélectionner un client et un vendeur
             Console.WriteLine("Sélectionnez un client :");
-            AfficherUtilisateurs();
+            AfficherClients();
             int indexClient = int.Parse(Console.ReadLine()) - 1;
 
             Console.WriteLine("Sélectionnez un vendeur :");
-            AfficherUtilisateurs();
+            AfficherVendeurs();
             int indexVendeur = int.Parse(Console.ReadLine()) - 1;
 
-            var client = utilisateurs[indexClient] as Client;
-            var vendeur = utilisateurs[indexVendeur] as Vendeur;
+            var client = clients[indexClient] as Client;
+            var vendeur = vendeurs[indexVendeur] as Vendeur;
 
             // Sélectionner des fleurs et des bouquets
             var fleursSelectionnees = new List<Fleur>();

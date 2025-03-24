@@ -1,0 +1,15 @@
+{
+  "clients": [
+    {
+      "Nom": "gg",
+      "Prenom": "dd",
+      "Telephone": 11,
+      "Adresse": "c"
+    }
+  ],
+  "vendeurs": [],
+  "fournisseurs": [],
+  "proprietaires": [],
+  "ModelesBouquets": [],
+  "Commandes": []
+}

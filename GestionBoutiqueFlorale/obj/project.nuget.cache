@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "p4Z8rr+TFlw=",
+  "dgSpecHash": "ySabC5d1pII=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj",
+  "projectFilePath": "C:\\Users\\victorien\\Desktop\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale\\GestionBoutiqueFlorale.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
+    "C:\\Users\\victorien\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
+    "C:\\Users\\victorien\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
