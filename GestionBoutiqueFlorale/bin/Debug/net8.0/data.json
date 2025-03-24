@@ -7,9 +7,35 @@
       "Adresse": "c"
     }
   ],
-  "vendeurs": [],
+  "vendeurs": [
+    {
+      "Nom": "vendeur1",
+      "Prenom": "dd",
+      "Telephone": 14,
+      "Adresse": "rue saint edmond"
+    }
+  ],
   "fournisseurs": [],
   "proprietaires": [],
-  "ModelesBouquets": [],
+  "ModelesBouquets": [
+    {
+      "NomBouquet": "modele1",
+      "Fleurs": [
+        {
+          "Nom": "Lys",
+          "PrixUnitaire": 4.1,
+          "CouleurDominante": "Blanc",
+          "Description": "Parfum envoûtant"
+        },
+        {
+          "Nom": "Dahlia",
+          "PrixUnitaire": 4.4,
+          "CouleurDominante": "Rouge",
+          "Description": "Fleurs aux formes variées"
+        }
+      ],
+      "CartePersonnalise": "amour"
+    }
+  ],
   "Commandes": []
 }

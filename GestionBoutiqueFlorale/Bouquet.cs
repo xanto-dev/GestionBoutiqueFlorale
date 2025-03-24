@@ -4,11 +4,13 @@ namespace GestionBoutiqueFlorale
 {
     public class Bouquet
     {
+        public string NomBouquet { get; set; }
         public List<Fleur> Fleurs { get; set; }
         public string CartePersonnalise { get; set; }
 
-        public Bouquet(List<Fleur> fleurs, string cartePersonnalise)
+        public Bouquet(string nomBouquet, List<Fleur> fleurs, string cartePersonnalise)
         {
+            NomBouquet = nomBouquet;
             Fleurs = fleurs;
             CartePersonnalise = cartePersonnalise;
         }
@@ -27,11 +29,12 @@ namespace GestionBoutiqueFlorale
         {
             var fleursSelectionnees = new List<Fleur>();
             bool continuer = true;
+            
 
             while (continuer)
             {
                 AfficherFleursDisponibles(fleurs);
-                Console.WriteLine("Ajouter une fleur au bouquet (tapez 'fin' pour terminer) :");
+                Console.WriteLine("Entrez un numero pour choisir une fleur a ajouter (tapez 'fin' pour terminer) :");
                 string choix = Console.ReadLine();
 
                 if (choix.ToLower() == "fin")
@@ -55,7 +58,10 @@ namespace GestionBoutiqueFlorale
             Console.WriteLine("Ajouter une carte personnalisée (laisser vide pour aucune) :");
             string carte = Console.ReadLine();
 
-            return new Bouquet(fleursSelectionnees, carte);
+            Console.Write("Entrer Nom du modèle : ");
+            string nomModele = Console.ReadLine();
+
+            return new Bouquet(nomModele, fleursSelectionnees, carte);
         }
 
         public static void AfficherFleursDisponibles(List<Fleur> fleurs)

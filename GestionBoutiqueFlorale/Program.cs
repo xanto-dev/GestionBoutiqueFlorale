@@ -114,6 +114,8 @@ namespace GestionBoutiqueFlorale
                 case "4":
                     AfficherClients();
                     AfficherVendeurs();
+                    AfficherFournisseurs();
+                    AfficherProprietaires();
                     break;
                 default:
                     Console.WriteLine("Choix invalide.");
@@ -188,6 +190,22 @@ namespace GestionBoutiqueFlorale
                 Console.WriteLine($"- {client.Nom}, {client.Prenom}");
             }
         }
+        static void AfficherFournisseurs()
+        {
+            Console.WriteLine("\nListe des fournisseurs :");
+            foreach (var fournisseur in fournisseurs)
+            {
+                Console.WriteLine($"- {fournisseur.Nom}, {fournisseur.Prenom}");
+            }
+        }
+        static void AfficherProprietaires()
+        {
+            Console.WriteLine("\nListe des proprietaires :");
+            foreach (var proprietaire in proprietaires)
+            {
+                Console.WriteLine($"- {proprietaire.Nom}, {proprietaire.Prenom}");
+            }
+        }
 
         static void GestionFleurs()
         {
@@ -199,22 +217,16 @@ namespace GestionBoutiqueFlorale
         {
             Console.WriteLine("\n=== Gestion des bouquets ===");
             Console.WriteLine("1. Créer un bouquet personnalisé");
-            Console.WriteLine("2. Enregistrer un modèle de bouquet");
             Console.Write("Choisissez une option : ");
             string choix = Console.ReadLine();
 
             switch (choix)
             {
                 case "1":
-                    var bouquet = Bouquet.CreerBouquetPersonnalise(fleurs);
-                    Console.WriteLine("Bouquet créé avec succès !");
-                    break;
-                case "2":
-                    Console.Write("Nom du modèle : ");
-                    string nomModele = Console.ReadLine();
                     var bouquetModele = Bouquet.CreerBouquetPersonnalise(fleurs);
                     modelesBouquets.Add(bouquetModele);
                     Console.WriteLine("Modèle de bouquet enregistré avec succès !");
+                    SauvegarderData();
                     break;
                 default:
                     Console.WriteLine("Choix invalide.");
@@ -291,6 +303,7 @@ namespace GestionBoutiqueFlorale
             // Créer la commande
             var commande = new Commande(commandes.Count + 1, client, vendeur, fleursSelectionnees, bouquetsSelectionnes);
             commandes.Add(commande);
+            SauvegarderData();
             Console.WriteLine("Commande passée avec succès !");
         }
 

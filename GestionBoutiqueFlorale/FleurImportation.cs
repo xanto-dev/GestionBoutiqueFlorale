@@ -28,9 +28,9 @@ namespace GestionBoutiqueFlorale
         public static void AfficherFleursDisponibles(List<Fleur> fleurs)
         {
             Console.WriteLine("Fleurs disponibles :");
-            foreach (var fleur in fleurs)
+            for (int i = 0; i < fleurs.Count; i++)
             {
-                fleur.AfficherDetails();
+                Console.WriteLine($"{i + 1}. {fleurs[i].Nom} ({fleurs[i].CouleurDominante}) : {fleurs[i].PrixUnitaire} CAD");
             }
         }
     }
