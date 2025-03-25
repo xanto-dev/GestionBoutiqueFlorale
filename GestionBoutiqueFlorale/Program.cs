@@ -16,6 +16,7 @@ namespace GestionBoutiqueFlorale
 
         static void Main(string[] args)
         {
+            Console.Clear();
             // Charger les données (créera le fichier JSON s'il n'existe pas)
             var data = DataManager.Charger();
 
@@ -84,6 +85,7 @@ namespace GestionBoutiqueFlorale
 
         static void AfficherMenuPrincipal()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Menu Principal ===");
             Console.WriteLine("1. Gestion des utilisateurs");
             Console.WriteLine("2. Gestion des fleurs");
@@ -96,6 +98,7 @@ namespace GestionBoutiqueFlorale
 
         static void GestionUtilisateurs()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Gestion des utilisateurs ===");
             Console.WriteLine("1. Ajouter un client");
             Console.WriteLine("2. Ajouter un vendeur");
@@ -219,12 +222,14 @@ namespace GestionBoutiqueFlorale
 
         static void GestionFleurs()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Gestion des fleurs ===");
             FleurImportation.AfficherFleursDisponibles(fleurs);
         }
 
         static void GestionBouquets()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Gestion des bouquets ===");
             Console.WriteLine("1. Créer un bouquet personnalisé");
             Console.Write("Choisissez une option : ");
@@ -246,6 +251,7 @@ namespace GestionBoutiqueFlorale
 
         static void GestionCommandes()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Gestion des commandes ===");
             Console.WriteLine("1. Passer une commande");
             Console.WriteLine("2. Valider une commande");
@@ -272,6 +278,7 @@ namespace GestionBoutiqueFlorale
 
         static void PasserCommande()
         {
+            Console.Clear();
             // Sélectionner un client
             AfficherClients();
             Console.Write("Entrer un numéro pour sélectionner un client: ");
@@ -344,6 +351,7 @@ namespace GestionBoutiqueFlorale
 
         static void ValiderCommande()
         {
+            Console.Clear();
             for (int i = 0; i < commandes.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Commande {commandes[i].Client.Nom}");
@@ -356,6 +364,7 @@ namespace GestionBoutiqueFlorale
 
         static void AnnulerCommande()
         {
+            Console.Clear();
             for (int i = 0; i < commandes.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Commande {commandes[i].Client.Nom}");
@@ -368,6 +377,7 @@ namespace GestionBoutiqueFlorale
 
         static void GestionFactures()
         {
+            Console.Clear();
             Console.WriteLine("\n=== Gestion des factures ===");
             int i = 0;
             foreach (var commande in commandes)
@@ -386,7 +396,7 @@ namespace GestionBoutiqueFlorale
 
         static void PayerCommande(Commande commande)
         {
-            
+            Console.Clear();
             Console.WriteLine("1. Carte de débit");
             Console.WriteLine("2. Carte de crédit");
             Console.WriteLine("3. Espèces");
