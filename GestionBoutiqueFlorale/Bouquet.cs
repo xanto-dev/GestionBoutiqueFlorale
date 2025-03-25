@@ -29,12 +29,11 @@ namespace GestionBoutiqueFlorale
         {
             var fleursSelectionnees = new List<Fleur>();
             bool continuer = true;
-            
-
+            AfficherFleursDisponibles(fleurs);
             while (continuer)
             {
-                AfficherFleursDisponibles(fleurs);
-                Console.WriteLine("Entrez un numero pour choisir une fleur a ajouter (tapez 'fin' pour terminer) :");
+                
+                Console.Write("Entrez un numero pour choisir une fleur a ajouter (tapez 'fin' pour terminer): ");
                 string choix = Console.ReadLine();
 
                 if (choix.ToLower() == "fin")
@@ -55,10 +54,10 @@ namespace GestionBoutiqueFlorale
                 }
             }
 
-            Console.WriteLine("Ajouter une carte personnalisée (laisser vide pour aucune) :");
+            Console.Write("Entrer le message pour la carte personnalisée (laisser vide pour aucune) :");
             string carte = Console.ReadLine();
 
-            Console.Write("Entrer Nom du modèle : ");
+            Console.Write("Entrer le nom du modèle : ");
             string nomModele = Console.ReadLine();
 
             return new Bouquet(nomModele, fleursSelectionnees, carte);

@@ -184,7 +184,7 @@ namespace GestionBoutiqueFlorale
             int i = 0;
             foreach (var vendeur in vendeurs)
             {
-                Console.WriteLine($"{i + 1}. Nom: {vendeur.Nom} {vendeur.Prenom}");
+                Console.WriteLine($"{i + 1}. {vendeur.Nom} {vendeur.Prenom}");
                 i += 1;
             }
             
@@ -297,7 +297,7 @@ namespace GestionBoutiqueFlorale
             FleurImportation.AfficherFleursDisponibles(fleurs);
             while (true)
             {
-                Console.Write("Ajouter des fleurs à la commande (tapez 'fin' pour terminer): ");
+                Console.Write("Entrez un numero pour choisir une fleur à ajouter (tapez 'fin' pour terminer): ");
                 string choixFleur = Console.ReadLine();
                 if (choixFleur.ToLower() == "fin") break;
                 if (!int.TryParse(choixFleur, out int indexFleur) || indexFleur < 1 || indexFleur > fleurs.Count)
@@ -322,7 +322,7 @@ namespace GestionBoutiqueFlorale
             }
             while (true)
             {
-                Console.Write("Ajouter des bouquets à la commande (tapez 'fin' pour terminer): ");
+                Console.Write("Entrez un numero pour choisir un bouquet à ajouter  (tapez 'fin' pour terminer): ");
                 string choixBouquet = Console.ReadLine();
                 if (choixBouquet.ToLower() == "fin") break;
 

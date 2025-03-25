@@ -12,7 +12,7 @@ namespace GestionBoutiqueFlorale
         [JsonIgnore]
         public List<Commande> Commandes { get; set; }
 
-        public Client(string nom, string prenom, long telephone, string adresse)
+        public Client(string nom, string prenom, Int64 telephone, string adresse)
             : base(nom, prenom, telephone, adresse)
         {
              Commandes= new List<Commande>();

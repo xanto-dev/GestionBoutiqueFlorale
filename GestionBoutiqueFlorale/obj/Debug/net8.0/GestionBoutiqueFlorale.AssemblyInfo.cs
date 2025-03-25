@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionBoutiqueFlorale")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+984d01caecd6e8e5dad1db98f172658aa355408d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+571f1dee102e455aa91065421732cc715da0fdad")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionBoutiqueFlorale")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionBoutiqueFlorale")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
