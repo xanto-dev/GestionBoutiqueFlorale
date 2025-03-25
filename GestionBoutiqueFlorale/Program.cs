@@ -134,7 +134,7 @@ namespace GestionBoutiqueFlorale
             Console.Write("Prénom : ");
             string prenom = Console.ReadLine();
             Console.Write("Téléphone : ");
-            int telephone = int.Parse(Console.ReadLine());
+            Int64 telephone = Int64.Parse(Console.ReadLine());
             Console.Write("Adresse : ");
             string adresse = Console.ReadLine();
 
@@ -151,7 +151,7 @@ namespace GestionBoutiqueFlorale
             Console.Write("Prénom : ");
             string prenom = Console.ReadLine();
             Console.Write("Téléphone : ");
-            int telephone = int.Parse(Console.ReadLine());
+            Int64 telephone = Int64.Parse(Console.ReadLine());
             Console.Write("Adresse : ");
             string adresse = Console.ReadLine();
 
@@ -168,7 +168,7 @@ namespace GestionBoutiqueFlorale
             Console.Write("Prénom : ");
             string prenom = Console.ReadLine();
             Console.Write("Téléphone : ");
-            int telephone = int.Parse(Console.ReadLine());
+            Int64 telephone = Int64.Parse(Console.ReadLine());
             Console.Write("Adresse : ");
             string adresse = Console.ReadLine();
 

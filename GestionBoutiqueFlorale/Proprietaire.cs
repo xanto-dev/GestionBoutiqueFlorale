@@ -8,6 +8,6 @@ namespace GestionBoutiqueFlorale
 {
     public class Proprietaire : Utilisateur
     {
-         public Proprietaire(string nom, string prenom, int telephone, string adresse) : base(nom, prenom, telephone, adresse) { }
+         public Proprietaire(string nom, string prenom, Int64 telephone, string adresse) : base(nom, prenom, telephone, adresse) { }
     }
 }

@@ -13,10 +13,10 @@ namespace GestionBoutiqueFlorale
     {
         public string Nom { get; set; }
         public string Prenom{ get; set; }
-        public int Telephone { get; set; }
+        public Int64 Telephone { get; set; }
         public string Adresse { get; set; }
 
-        public Utilisateur(string nom, string prenom, int telephone, string adresse )
+        public Utilisateur(string nom, string prenom, Int64 telephone, string adresse )
         {
             
             Nom = nom;
