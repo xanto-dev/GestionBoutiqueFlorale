@@ -25,6 +25,7 @@ namespace GestionBoutiqueFlorale
             Adresse = adresse;
         }
 
+        public abstract void AfficherProfil();
 
     }
 
