@@ -1,9 +1,281 @@
 {
-  "clients": [],
-  "vendeurs": [],
+  "clients": [
+    {
+      "Nom": "Fotso",
+      "Prenom": "victorien",
+      "Telephone": 2639996319,
+      "Adresse": "rue saint edmond"
+    },
+    {
+      "Nom": "Bah",
+      "Prenom": "Boubacar",
+      "Telephone": 5814597772,
+      "Adresse": "214 rue saint edmond app 23"
+    }
+  ],
+  "vendeurs": [
+    {
+      "Nom": "Princial",
+      "Prenom": "fredy",
+      "Telephone": 2345678888,
+      "Adresse": "rue de la gare"
+    },
+    {
+      "Nom": "Adja",
+      "Prenom": "nina",
+      "Telephone": 3456780000,
+      "Adresse": "rue saint baptiste"
+    }
+  ],
   "fournisseurs": [],
   "proprietaires": [],
-  "ModelesBouquets": [],
-  "Commandes": [],
-  "Factures": []
+  "ModelesBouquets": [
+    {
+      "NomBouquet": "Bouquet_amour",
+      "Fleurs": [
+        {
+          "Nom": "Rose",
+          "PrixUnitaire": 3.4,
+          "CouleurDominante": "Rouge",
+          "Description": "Parfumée et symbolise l'amour"
+        },
+        {
+          "Nom": "Tulipe",
+          "PrixUnitaire": 2.5,
+          "CouleurDominante": "Jaune",
+          "Description": "Printanière et élégante"
+        }
+      ],
+      "CartePersonnalise": "voici une carte d'amour"
+    },
+    {
+      "NomBouquet": "bouquet2",
+      "Fleurs": [
+        {
+          "Nom": "Zinnia",
+          "PrixUnitaire": 2.6,
+          "CouleurDominante": "Orange",
+          "Description": "Vive et résistante"
+        },
+        {
+          "Nom": "Cosmos",
+          "PrixUnitaire": 2.2,
+          "CouleurDominante": "Rose",
+          "Description": "Fleurs aériennes"
+        }
+      ],
+      "CartePersonnalise": "message bisou"
+    }
+  ],
+  "Commandes": [
+    {
+      "Client": {
+        "Nom": "Bah",
+        "Prenom": "Boubacar",
+        "Telephone": 5814597772,
+        "Adresse": "214 rue saint edmond app 23"
+      },
+      "Vendeur": {
+        "Nom": "Adja",
+        "Prenom": "nina",
+        "Telephone": 3456780000,
+        "Adresse": "rue saint baptiste"
+      },
+      "Fleurs": [
+        {
+          "Nom": "Lys",
+          "PrixUnitaire": 4.1,
+          "CouleurDominante": "Blanc",
+          "Description": "Parfum envoûtant"
+        },
+        {
+          "Nom": "Pivoine",
+          "PrixUnitaire": 6.1,
+          "CouleurDominante": "Rose",
+          "Description": "Floraison abondante"
+        }
+      ],
+      "Bouquets": [
+        {
+          "NomBouquet": "Bouquet_amour",
+          "Fleurs": [
+            {
+              "Nom": "Rose",
+              "PrixUnitaire": 3.4,
+              "CouleurDominante": "Rouge",
+              "Description": "Parfumée et symbolise l'amour"
+            },
+            {
+              "Nom": "Tulipe",
+              "PrixUnitaire": 2.5,
+              "CouleurDominante": "Jaune",
+              "Description": "Printanière et élégante"
+            }
+          ],
+          "CartePersonnalise": "voici une carte d'amour"
+        },
+        {
+          "NomBouquet": "Bouquet_amour",
+          "Fleurs": [
+            {
+              "Nom": "Rose",
+              "PrixUnitaire": 3.4,
+              "CouleurDominante": "Rouge",
+              "Description": "Parfumée et symbolise l'amour"
+            },
+            {
+              "Nom": "Tulipe",
+              "PrixUnitaire": 2.5,
+              "CouleurDominante": "Jaune",
+              "Description": "Printanière et élégante"
+            }
+          ],
+          "CartePersonnalise": "voici une carte d'amour"
+        }
+      ],
+      "MontantTotal": 28.0,
+      "EstValidee": true
+    },
+    {
+      "Client": {
+        "Nom": "Fotso",
+        "Prenom": "victorien",
+        "Telephone": 2639996319,
+        "Adresse": "rue saint edmond"
+      },
+      "Vendeur": {
+        "Nom": "Princial",
+        "Prenom": "fredy",
+        "Telephone": 2345678888,
+        "Adresse": "rue de la gare"
+      },
+      "Fleurs": [
+        {
+          "Nom": "Hibiscus",
+          "PrixUnitaire": 3.5,
+          "CouleurDominante": "Rouge",
+          "Description": "Tropicale et décorative"
+        },
+        {
+          "Nom": "Bégonia",
+          "PrixUnitaire": 3.9,
+          "CouleurDominante": "Rose",
+          "Description": "Fleur en pot ou en massif"
+        }
+      ],
+      "Bouquets": [
+        {
+          "NomBouquet": "bouquet2",
+          "Fleurs": [
+            {
+              "Nom": "Zinnia",
+              "PrixUnitaire": 2.6,
+              "CouleurDominante": "Orange",
+              "Description": "Vive et résistante"
+            },
+            {
+              "Nom": "Cosmos",
+              "PrixUnitaire": 2.2,
+              "CouleurDominante": "Rose",
+              "Description": "Fleurs aériennes"
+            }
+          ],
+          "CartePersonnalise": "message bisou"
+        },
+        {
+          "NomBouquet": "Bouquet_amour",
+          "Fleurs": [
+            {
+              "Nom": "Rose",
+              "PrixUnitaire": 3.4,
+              "CouleurDominante": "Rouge",
+              "Description": "Parfumée et symbolise l'amour"
+            },
+            {
+              "Nom": "Tulipe",
+              "PrixUnitaire": 2.5,
+              "CouleurDominante": "Jaune",
+              "Description": "Printanière et élégante"
+            }
+          ],
+          "CartePersonnalise": "voici une carte d'amour"
+        }
+      ],
+      "MontantTotal": 24.1,
+      "EstValidee": false
+    }
+  ],
+  "Factures": [
+    {
+      "Commande": {
+        "Client": {
+          "Nom": "Bah",
+          "Prenom": "Boubacar",
+          "Telephone": 5814597772,
+          "Adresse": "214 rue saint edmond app 23"
+        },
+        "Vendeur": {
+          "Nom": "Adja",
+          "Prenom": "nina",
+          "Telephone": 3456780000,
+          "Adresse": "rue saint baptiste"
+        },
+        "Fleurs": [
+          {
+            "Nom": "Lys",
+            "PrixUnitaire": 4.1,
+            "CouleurDominante": "Blanc",
+            "Description": "Parfum envoûtant"
+          },
+          {
+            "Nom": "Pivoine",
+            "PrixUnitaire": 6.1,
+            "CouleurDominante": "Rose",
+            "Description": "Floraison abondante"
+          }
+        ],
+        "Bouquets": [
+          {
+            "NomBouquet": "Bouquet_amour",
+            "Fleurs": [
+              {
+                "Nom": "Rose",
+                "PrixUnitaire": 3.4,
+                "CouleurDominante": "Rouge",
+                "Description": "Parfumée et symbolise l'amour"
+              },
+              {
+                "Nom": "Tulipe",
+                "PrixUnitaire": 2.5,
+                "CouleurDominante": "Jaune",
+                "Description": "Printanière et élégante"
+              }
+            ],
+            "CartePersonnalise": "voici une carte d'amour"
+          },
+          {
+            "NomBouquet": "Bouquet_amour",
+            "Fleurs": [
+              {
+                "Nom": "Rose",
+                "PrixUnitaire": 3.4,
+                "CouleurDominante": "Rouge",
+                "Description": "Parfumée et symbolise l'amour"
+              },
+              {
+                "Nom": "Tulipe",
+                "PrixUnitaire": 2.5,
+                "CouleurDominante": "Jaune",
+                "Description": "Printanière et élégante"
+              }
+            ],
+            "CartePersonnalise": "voici une carte d'amour"
+          }
+        ],
+        "MontantTotal": 28.0,
+        "EstValidee": true
+      },
+      "ModePaiement": "Carte de crédit"
+    }
+  ]
 }
