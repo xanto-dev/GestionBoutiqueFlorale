@@ -20,6 +20,7 @@ namespace GestionBoutiqueFlorale
         }
         public void GenererFacture()
         {
+           
             Console.WriteLine("=== Facture ===");
             Console.WriteLine($"Client : {Commande.Client.Nom} {Commande.Client.Prenom}");
             Console.WriteLine($"Vendeur : {Commande.Vendeur.Nom} {Commande.Vendeur.Prenom}");

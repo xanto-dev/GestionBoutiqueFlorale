@@ -12,6 +12,7 @@ namespace GestionBoutiqueFlorale
         static List<Fleur> fleurs = new List<Fleur>();
         static List<Bouquet> modelesBouquets = new List<Bouquet>();
         static List<Commande> commandes = new List<Commande>();
+        static List<Facture> factures = new List<Facture>();
 
         static void Main(string[] args)
         {
@@ -24,6 +25,7 @@ namespace GestionBoutiqueFlorale
             proprietaires = data.proprietaires ?? new List<Proprietaire>();
             modelesBouquets = data.ModelesBouquets ?? new List<Bouquet>();
             commandes = data.Commandes ?? new List<Commande>();
+            factures = data.Factures ?? new List<Facture>();
 
           
             // Importer les fleurs depuis le fichier CSV
@@ -74,7 +76,9 @@ namespace GestionBoutiqueFlorale
                 fournisseurs = fournisseurs,
                 proprietaires = proprietaires,
                 ModelesBouquets = modelesBouquets,
-                Commandes = commandes
+                Commandes = commandes,
+                Factures = factures,
+
             });
         }
 
@@ -177,25 +181,31 @@ namespace GestionBoutiqueFlorale
         static void AfficherVendeurs()
         {
             Console.WriteLine("\nListe des vendeurs :");
+            int i = 0;
             foreach (var vendeur in vendeurs)
             {
-                Console.WriteLine($"- {vendeur.Nom}, {vendeur.Prenom}");
+                Console.WriteLine($"{i + 1}. Nom: {vendeur.Nom} {vendeur.Prenom}");
+                i += 1;
             }
+            
         }
         static void AfficherClients()
         {
             Console.WriteLine("\nListe des clients :");
+            int i = 0;
             foreach (var client in clients)
             {
-                Console.WriteLine($"- {client.Nom}, {client.Prenom}");
+                Console.WriteLine($"{i + 1}. {client.Nom} {client.Prenom}");
+                i += 1;
             }
+            
         }
         static void AfficherFournisseurs()
         {
             Console.WriteLine("\nListe des fournisseurs :");
             foreach (var fournisseur in fournisseurs)
             {
-                Console.WriteLine($"- {fournisseur.Nom}, {fournisseur.Prenom}");
+                Console.WriteLine($"- {fournisseur.Nom} {fournisseur.Prenom}");
             }
         }
         static void AfficherProprietaires()
@@ -203,7 +213,7 @@ namespace GestionBoutiqueFlorale
             Console.WriteLine("\nListe des proprietaires :");
             foreach (var proprietaire in proprietaires)
             {
-                Console.WriteLine($"- {proprietaire.Nom}, {proprietaire.Prenom}");
+                Console.WriteLine($"- {proprietaire.Nom} {proprietaire.Prenom}");
             }
         }
 
@@ -262,42 +272,67 @@ namespace GestionBoutiqueFlorale
 
         static void PasserCommande()
         {
-            // Sélectionner un client et un vendeur
-            Console.WriteLine("Sélectionnez un client :");
+            // Sélectionner un client
             AfficherClients();
-            int indexClient = int.Parse(Console.ReadLine()) - 1;
+            Console.Write("Entrer un numéro pour sélectionner un client: ");
+            if (!int.TryParse(Console.ReadLine(), out int indexClient) || indexClient < 1 || indexClient > clients.Count)
+            {
+                Console.WriteLine("Choix de client invalide.");
+                return;
+            }
+            var client = clients[indexClient - 1] as Client;
 
-            Console.WriteLine("Sélectionnez un vendeur :");
+            // Sélectionner un vendeur
             AfficherVendeurs();
-            int indexVendeur = int.Parse(Console.ReadLine()) - 1;
+            Console.Write("Entrer un numéro pour sélectionner un vendeur: ");
+            if (!int.TryParse(Console.ReadLine(), out int indexVendeur) || indexVendeur < 1 || indexVendeur > vendeurs.Count)
+            {
+                Console.WriteLine("Choix de vendeur invalide.");
+                return;
+            }
+            var vendeur = vendeurs[indexVendeur - 1] as Vendeur;
 
-            var client = clients[indexClient] as Client;
-            var vendeur = vendeurs[indexVendeur] as Vendeur;
-
-            // Sélectionner des fleurs et des bouquets
+            // Sélectionner des fleurs
             var fleursSelectionnees = new List<Fleur>();
-            var bouquetsSelectionnes = new List<Bouquet>();
-
             FleurImportation.AfficherFleursDisponibles(fleurs);
-            Console.WriteLine("Ajouter des fleurs à la commande (tapez 'fin' pour terminer) :");
-           
             while (true)
             {
+                Console.Write("Ajouter des fleurs à la commande (tapez 'fin' pour terminer): ");
                 string choixFleur = Console.ReadLine();
                 if (choixFleur.ToLower() == "fin") break;
-                fleursSelectionnees.Add(fleurs[int.Parse(choixFleur) - 1]);
+                if (!int.TryParse(choixFleur, out int indexFleur) || indexFleur < 1 || indexFleur > fleurs.Count)
+                {
+                    Console.WriteLine("Numéro de fleur invalide. Veuillez entrer un numéro valide.");
+                    continue;
+                }
+                fleursSelectionnees.Add(fleurs[indexFleur - 1]);
+                Console.WriteLine($"Fleur '{fleurs[indexFleur - 1].Nom}' ajoutée à la commande.");
             }
 
-            Console.WriteLine("Ajouter des bouquets à la commande (tapez 'fin' pour terminer) :");
-            foreach (var bouquet in modelesBouquets)
+            // Sélectionner des bouquets
+            var bouquetsSelectionnes = new List<Bouquet>();
+            Console.WriteLine("Bouquets disponibles :");
+            for (int i = 0; i < modelesBouquets.Count; i++)
             {
-                Console.WriteLine($"- {bouquet.Fleurs.Count} fleurs");
+                Console.WriteLine($"{i + 1}. Bouquet '{modelesBouquets[i].NomBouquet}' contenant :");
+                foreach (var fleur in modelesBouquets[i].Fleurs)
+                {
+                    Console.WriteLine($"   - {fleur.Nom}");
+                }
             }
             while (true)
             {
+                Console.Write("Ajouter des bouquets à la commande (tapez 'fin' pour terminer): ");
                 string choixBouquet = Console.ReadLine();
                 if (choixBouquet.ToLower() == "fin") break;
-                bouquetsSelectionnes.Add(modelesBouquets[int.Parse(choixBouquet) - 1]);
+
+                if (!int.TryParse(choixBouquet, out int indexBouquet) || indexBouquet < 1 || indexBouquet > modelesBouquets.Count)
+                {
+                    Console.WriteLine("Numéro de bouquet invalide. Veuillez entrer un numéro valide.");
+                    continue;
+                }
+                bouquetsSelectionnes.Add(modelesBouquets[indexBouquet - 1]);
+                Console.WriteLine($"Bouquet '{modelesBouquets[indexBouquet - 1].NomBouquet}' ajouté à la commande.");
             }
 
             // Créer la commande
@@ -309,44 +344,53 @@ namespace GestionBoutiqueFlorale
 
         static void ValiderCommande()
         {
-            Console.WriteLine("Sélectionnez une commande à valider :");
             for (int i = 0; i < commandes.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Commande {commandes[i].Client.Nom}");
             }
+            Console.Write("Sélectionnez une commande à valider: ");
             int indexCommande = int.Parse(Console.ReadLine()) - 1;
-            commandes[indexCommande].ValiderCommande();
+            commandes[indexCommande].Valider();
+            SauvegarderData();
         }
 
         static void AnnulerCommande()
         {
-            Console.WriteLine("Sélectionnez une commande à annuler :");
             for (int i = 0; i < commandes.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Commande {commandes[i].Client.Nom}");
             }
+            Console.WriteLine("Sélectionnez une commande à annuler: ");
             int indexCommande = int.Parse(Console.ReadLine()) - 1;
-            commandes[indexCommande].AnnulerCommande();
+            commandes[indexCommande].Annuler();
+            SauvegarderData();
         }
 
         static void GestionFactures()
         {
             Console.WriteLine("\n=== Gestion des factures ===");
-            Console.WriteLine("Sélectionnez une commande pour générer la facture :");
-            for (int i = 0; i < commandes.Count; i++)
+            int i = 0;
+            foreach (var commande in commandes)
             {
-                Console.WriteLine($"{i + 1}. Commande {commandes[i].Client.Nom}");
+                if(commande.EstValidee == true)
+                {
+                    Console.WriteLine($"{i + 1}. Commande {commande.Client.Nom}");
+                }
+                i += 1;
+
             }
+            Console.Write("Sélectionnez une commande pour générer la facture: ");
             int indexCommande = int.Parse(Console.ReadLine()) - 1;
             PayerCommande(commandes[indexCommande]);
         }
 
         static void PayerCommande(Commande commande)
         {
-            Console.WriteLine("Choisissez un mode de paiement :");
+            
             Console.WriteLine("1. Carte de débit");
             Console.WriteLine("2. Carte de crédit");
             Console.WriteLine("3. Espèces");
+            Console.Write("Choisissez un mode de paiement: ");
             string choix = Console.ReadLine();
 
             string modePaiement = choix switch
@@ -358,7 +402,9 @@ namespace GestionBoutiqueFlorale
             };
 
             var facture = new Facture(commande, modePaiement);
+            factures.Add(facture);
             facture.GenererFacture();
+            SauvegarderData();
         }
     }
 }

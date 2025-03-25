@@ -17,6 +17,7 @@ public static class DataManager
         public List<Proprietaire> proprietaires { get; set; } = new List<Proprietaire>();
         public List<Bouquet> ModelesBouquets { get; set; } = new List<Bouquet>();
         public List<Commande> Commandes { get; set; } = new List<Commande>();
+         public List<Facture> Factures { get; set;} = new List<Facture>();
     }
 
     // Vérifie si le fichier JSON existe, sinon le crée avec des listes vides

@@ -33,13 +33,13 @@ namespace GestionBoutiqueFlorale
             return montantFleurs + montantBouquets;
         }
 
-        public void ValiderCommande()
+        public void Valider()
         {
             EstValidee = true;
             Console.WriteLine("Commande validée.");
         }
 
-        public void AnnulerCommande()
+        public void Annuler()
         {
             EstValidee = false;
             Console.WriteLine("Commande annulée.");
