@@ -19,6 +19,7 @@ namespace GestionBoutiqueFlorale
             
             // Charger les données (créera le fichier JSON s'il n'existe pas)
             var data = DataManager.Charger();
+            
 
             clients = data.clients ?? new List<Client>();
             vendeurs = data.vendeurs ?? new List<Vendeur>();
@@ -351,7 +352,7 @@ namespace GestionBoutiqueFlorale
             }
 
             // Créer la commande
-            var commande = new Commande(commandes.Count + 1, client, vendeur, fleursSelectionnees, bouquetsSelectionnes);
+            var commande = new Commande(client, vendeur, fleursSelectionnees, bouquetsSelectionnes);
             commandes.Add(commande);
             SauvegarderData();
             Console.WriteLine("Commande passée avec succès !");

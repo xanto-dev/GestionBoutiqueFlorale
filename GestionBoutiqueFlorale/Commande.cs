@@ -15,7 +15,7 @@ namespace GestionBoutiqueFlorale
         public double MontantTotal { get; set; }
         public bool EstValidee { get; set; }
 
-        public Commande(int id, Client client, Vendeur vendeur, List<Fleur> fleurs, List<Bouquet> bouquets)
+        public Commande(Client client, Vendeur vendeur, List<Fleur> fleurs, List<Bouquet> bouquets)
         {
 
             Client = client;
