@@ -32,7 +32,8 @@ namespace GestionBoutiqueFlorale
             CouleurDominante = couleurDominante;
             Description = description;
         }
-       
+
+
 
     }
 }

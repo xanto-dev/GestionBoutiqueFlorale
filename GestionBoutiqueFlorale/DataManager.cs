@@ -11,13 +11,15 @@ public static class DataManager
     // Classe contenant toutes les listes
     public class AppData
     {
+        public List<Fleur> Fleurs { get; set; } = new List<Fleur>();
         public List<Client> clients { get; set; } = new List<Client>();
         public List<Vendeur> vendeurs { get; set; } = new List<Vendeur>();
         public List<Fournisseur> fournisseurs { get; set; } = new List<Fournisseur>();
         public List<Proprietaire> proprietaires { get; set; } = new List<Proprietaire>();
         public List<Bouquet> ModelesBouquets { get; set; } = new List<Bouquet>();
         public List<Commande> Commandes { get; set; } = new List<Commande>();
-         public List<Facture> Factures { get; set;} = new List<Facture>();
+        public List<Facture> Factures { get; set;} = new List<Facture>();
+        
     }
 
     // Vérifie si le fichier JSON existe, sinon le crée avec des listes vides

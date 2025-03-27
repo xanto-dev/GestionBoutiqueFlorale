@@ -19,8 +19,8 @@ namespace GestionBoutiqueFlorale
             
             // Charger les données (créera le fichier JSON s'il n'existe pas)
             var data = DataManager.Charger();
-            
 
+            fleurs = data.Fleurs ?? new List<Fleur>();
             clients = data.clients ?? new List<Client>();
             vendeurs = data.vendeurs ?? new List<Vendeur>();
             fournisseurs = data.fournisseurs ?? new List<Fournisseur>();
@@ -32,9 +32,28 @@ namespace GestionBoutiqueFlorale
           
             // Importer les fleurs depuis le fichier CSV
             var filename = "fleurs_db.csv";
-            fleurs = FleurImportation.ImporterFleurs(filename);
+            if (fleurs.Count == 0)
+            {
+                List<Fleur> nouvellesFleurs = FleurImportation.ImporterFleurs(filename);
+                if (nouvellesFleurs.Count > 0)
+                {
+                    fleurs.AddRange(nouvellesFleurs);
+                    SauvegarderData();
+                    Console.WriteLine("Importation des fleurs et sauvegarde effectuée.");
+                }
+                else
+                {
+                    Console.WriteLine("Aucune fleur importée.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Les fleurs sont déjà chargées, importation non nécessaire.");
+            }
+        
 
-            bool quitter = false;
+
+        bool quitter = false;
             while (!quitter)
             {
                 AfficherMenuPrincipal();
@@ -73,6 +92,7 @@ namespace GestionBoutiqueFlorale
         {
             DataManager.Sauvegarder(new DataManager.AppData
             {
+                Fleurs = fleurs,
                 clients = clients,
                 vendeurs = vendeurs,
                 fournisseurs = fournisseurs,
@@ -233,8 +253,92 @@ namespace GestionBoutiqueFlorale
         {
             
             Console.WriteLine("\n=== Gestion des fleurs ===");
-            FleurImportation.AfficherFleursDisponibles(fleurs);
+            Console.WriteLine("1. Réapprovisionnement");
+            Console.WriteLine("2. Afficher les fleurs");
+            Console.Write("Choisissez une option : ");
+            string choix = Console.ReadLine();
+
+            switch (choix)
+            {
+                case "1":
+                    ReapprovisionnerFleurs();
+                    break;
+                case "2":
+                    FleurImportation.AfficherFleursDisponibles(fleurs);
+                    break;
+                default:
+                    Console.WriteLine("Choix invalide.");
+                    break;
+            }
         }
+
+
+
+        static void ReapprovisionnerFleurs()
+        {
+            Console.WriteLine("\n=== Réapprovisionnement des fleurs ===");
+
+            // Sélectionner un fournisseur
+            AfficherFournisseurs();
+            Console.Write("Entrez un numéro pour sélectionner un fournisseur : ");
+            if (!int.TryParse(Console.ReadLine(), out int indexFournisseur) || indexFournisseur < 1 || indexFournisseur > fournisseurs.Count)
+            {
+                Console.WriteLine("Choix de fournisseur invalide.");
+                return;
+            }
+            var fournisseur = fournisseurs[indexFournisseur - 1];
+
+            // Sélectionner une fleur à réapprovisionner
+            Console.WriteLine("\nFleurs disponibles dans la boutique :");
+            AfficherFleursCommandes(commandes);
+
+            Console.Write("Entrez le numéro de la fleur à réapprovisionner : ");
+            if (!int.TryParse(Console.ReadLine(), out int indexFleur) || indexFleur < 1 || indexFleur > fleurs.Count)
+            {
+                Console.WriteLine("Choix de fleur invalide.");
+                return;
+            }
+            var fleur = fleurs[indexFleur - 1];
+
+            fleurs.Add(fleur);
+
+          
+            Console.WriteLine($"Le fournisseur {fournisseur.Nom} a ajouté {fleur.Nom} au stock.");
+
+            // Sauvegarder les modifications
+            SauvegarderData();
+        }
+
+        public static void AfficherFleursCommandes(List<Commande> commandes)
+        {
+            Console.WriteLine("Fleurs dans les commandes :");
+            List<Fleur> fleursCommandees = new List<Fleur>();
+
+            // Récupérer toutes les fleurs de chaque commande
+            foreach (var commande in commandes)
+            {
+                if (commande.Fleurs != null)
+                {
+                    fleursCommandees.AddRange(commande.Fleurs);
+                }
+            }
+
+            if (fleursCommandees.Count == 0)
+            {
+                Console.WriteLine("Aucune fleur dans les commandes.");
+                return;
+            }
+
+            // Affichage en utilisant le même principe que AfficherFleursDisponibles
+            for (int i = 0; i < fleursCommandees.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {fleursCommandees[i].Nom} ({fleursCommandees[i].CouleurDominante}) : {fleursCommandees[i].PrixUnitaire} CAD");
+            }
+        }
+
+
+
+
 
         static void GestionBouquets()
         {
@@ -354,6 +458,11 @@ namespace GestionBoutiqueFlorale
             // Créer la commande
             var commande = new Commande(client, vendeur, fleursSelectionnees, bouquetsSelectionnes);
             commandes.Add(commande);
+            foreach (var supp in fleursSelectionnees)
+            {
+                fleurs.Remove(supp);
+            }
+            
             SauvegarderData();
             Console.WriteLine("Commande passée avec succès !");
         }
