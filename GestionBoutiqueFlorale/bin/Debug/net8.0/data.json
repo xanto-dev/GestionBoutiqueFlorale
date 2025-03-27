@@ -185,6 +185,24 @@
       "PrixUnitaire": 6.8,
       "CouleurDominante": "Violet",
       "Description": "Exotique et élégante"
+    },
+    {
+      "Nom": "Hibiscus",
+      "PrixUnitaire": 3.5,
+      "CouleurDominante": "Rouge",
+      "Description": "Tropicale et décorative"
+    },
+    {
+      "Nom": "Rose",
+      "PrixUnitaire": 3.4,
+      "CouleurDominante": "Rouge",
+      "Description": "Parfumée et symbolise l'amour"
+    },
+    {
+      "Nom": "Hibiscus",
+      "PrixUnitaire": 3.5,
+      "CouleurDominante": "Rouge",
+      "Description": "Tropicale et décorative"
     }
   ],
   "clients": [

@@ -278,50 +278,21 @@ namespace GestionBoutiqueFlorale
         {
             Console.WriteLine("\n=== Réapprovisionnement des fleurs ===");
 
-            // Sélectionner un fournisseur
+            // 1. Sélection du fournisseur
             AfficherFournisseurs();
             Console.Write("Entrez un numéro pour sélectionner un fournisseur : ");
-            if (!int.TryParse(Console.ReadLine(), out int indexFournisseur) || indexFournisseur < 1 || indexFournisseur > fournisseurs.Count)
+            if (!int.TryParse(Console.ReadLine(), out int indexFournisseur) ||
+                indexFournisseur < 1 ||
+                indexFournisseur > fournisseurs.Count)
             {
                 Console.WriteLine("Choix de fournisseur invalide.");
                 return;
             }
             var fournisseur = fournisseurs[indexFournisseur - 1];
 
-            // Sélectionner une fleur à réapprovisionner
-            Console.WriteLine("\nFleurs disponibles dans la boutique :");
-            AfficherFleursCommandes(commandes);
-
-            Console.Write("Entrez le numéro de la fleur à réapprovisionner : ");
-            if (!int.TryParse(Console.ReadLine(), out int indexFleur) || indexFleur < 1 || indexFleur > fleurs.Count)
-            {
-                Console.WriteLine("Choix de fleur invalide.");
-                return;
-            }
-            var fleur = fleurs[indexFleur - 1];
-
-            fleurs.Add(fleur);
-
-          
-            Console.WriteLine($"Le fournisseur {fournisseur.Nom} a ajouté {fleur.Nom} au stock.");
-
-            // Sauvegarder les modifications
-            SauvegarderData();
-        }
-
-        public static void AfficherFleursCommandes(List<Commande> commandes)
-        {
-            Console.WriteLine("Fleurs dans les commandes :");
-            List<Fleur> fleursCommandees = new List<Fleur>();
-
-            // Récupérer toutes les fleurs de chaque commande
-            foreach (var commande in commandes)
-            {
-                if (commande.Fleurs != null)
-                {
-                    fleursCommandees.AddRange(commande.Fleurs);
-                }
-            }
+            // 2. Affichage des fleurs commandées
+            Console.WriteLine("\nFleurs dans les commandes :");
+            var fleursCommandees = AfficherFleursCommandes(commandes);
 
             if (fleursCommandees.Count == 0)
             {
@@ -329,11 +300,45 @@ namespace GestionBoutiqueFlorale
                 return;
             }
 
-            // Affichage en utilisant le même principe que AfficherFleursDisponibles
+            // 3. Sélection de la fleur à réapprovisionner
             for (int i = 0; i < fleursCommandees.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {fleursCommandees[i].Nom} ({fleursCommandees[i].CouleurDominante}) : {fleursCommandees[i].PrixUnitaire} CAD");
             }
+
+            Console.Write("Entrez le numéro de la fleur à réapprovisionner : ");
+            if (!int.TryParse(Console.ReadLine(), out int indexFleur) ||
+                indexFleur < 1 ||
+                indexFleur > fleursCommandees.Count)
+            {
+                Console.WriteLine("Choix de fleur invalide.");
+                return;
+            }
+
+            // 4. Ajout de la fleur sélectionnée
+            var fleurSelectionnee = fleursCommandees[indexFleur - 1];
+            fleurs.Add(fleurSelectionnee);
+
+            Console.WriteLine($"Le fournisseur {fournisseur.Nom} a ajouté {fleurSelectionnee.Nom} au stock.");
+
+            // 5. Sauvegarde
+            SauvegarderData();
+        }
+
+        // Méthode auxiliaire pour récupérer les fleurs des commandes
+        static List<Fleur> AfficherFleursCommandes(List<Commande> commandes)
+        {
+            List<Fleur> fleur = new List<Fleur>();
+
+            foreach (var commande in commandes)
+            {
+                if (commande.Fleurs != null)
+                {
+                    fleur.AddRange(commande.Fleurs);
+                }
+            }
+
+            return fleur;
         }
 
 
